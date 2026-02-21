@@ -10,6 +10,6 @@
 
 - [x] `index.html` in wartbare Partials aufteilen (`src/partials/*.html`) und eine Template-Datei einführen.
 - [x] Build-Skript ergänzen, das aus dem Template + Partials die finale `index.html` erzeugt.
-- [ ] CSS in Module aufteilen (`base.css`, `layout.css`, `components.css`) und über zentrale `styles.css` bündeln.
+- [x] CSS in Module aufteilen (`base.css`, `layout.css`, `components.css`) und über zentrale `styles.css` bündeln.
 - [ ] JavaScript in kleine Module aufteilen (`config`, `year`, `links`) und `main.js` als Einstieg nutzen.
 - [ ] Dokumentation ergänzen (`README.md`) mit Workflow für Änderungen und Build.
