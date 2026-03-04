@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Mission Control Dashboard – Demo-Interface für Teamsteuerung, Aufgabenstatus und Bereichs-KPIs.">
+  <meta name="author" content="Hendrik Schneemann">
+  <meta name="theme-color" content="#070d1a">
+  <meta name="robots" content="index,follow">
+  <title>Mission Control · Dashboard Demo</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/mission-control.css">
+</head>
+<body>
+  <a class="skip-link" href="#mission-main">Zum Inhalt springen</a>
+
+  <div class="wrap mission-wrap">
+    <header id="site-header">
+      <a class="brand" href="index.html" aria-label="Zur Startseite">
+        <b>Hendrik Schneemann</b>
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <a href="index.html">Startseite</a>
+        <a href="mission-control.html" class="is-active" aria-current="page">Mission Control</a>
+      </nav>
+    </header>
+
+    <main id="mission-main" data-reveal-group>
+      <section class="mission-header card" data-reveal aria-labelledby="mission-heading">
+        <div class="mission-header-row">
+          <div>
+            <p class="eyebrow">Control Layer · Demo Environment</p>
+            <h1 id="mission-heading">Mission Control Dashboard</h1>
+            <p class="muted">Bilinguales Live-Board für Team-Flow, Prioritäten und aktive Workstreams.</p>
+          </div>
+          <span class="mission-pill">Systemstatus · Stabil</span>
+        </div>
+
+        <div class="mission-tabs" role="tablist" aria-label="Mission Bereiche">
+          <button class="mission-tab is-active" role="tab" aria-selected="true">Mission Control</button>
+          <button class="mission-tab" role="tab" aria-selected="false">Tasks</button>
+          <button class="mission-tab" role="tab" aria-selected="false">Chat</button>
+          <button class="mission-tab" role="tab" aria-selected="false">Memory</button>
+          <button class="mission-tab" role="tab" aria-selected="false">Signals</button>
+        </div>
+      </section>
+
+      <section class="mission-grid">
+        <article class="card org-map" data-reveal aria-labelledby="org-map-heading">
+          <div class="pad">
+            <div class="panel-head">
+              <h2 id="org-map-heading">Team-Orchestrierung · Org Map</h2>
+              <span class="badge online">3 live</span>
+            </div>
+
+            <div class="org-canvas" role="list" aria-label="Hierarchie Teamstruktur">
+              <div class="node node-core" role="listitem">
+                <p class="node-label">Core Command</p>
+                <h3>Control Lead</h3>
+                <span class="badge online">online</span>
+              </div>
+
+              <div class="node-row">
+                <div class="node" role="listitem">
+                  <p class="node-label">Delivery</p>
+                  <h3>Build Team</h3>
+                  <span class="badge busy">busy</span>
+                </div>
+                <div class="node" role="listitem">
+                  <p class="node-label">Operations</p>
+                  <h3>Flow Team</h3>
+                  <span class="badge online">online</span>
+                </div>
+                <div class="node" role="listitem">
+                  <p class="node-label">Insights</p>
+                  <h3>Signal Team</h3>
+                  <span class="badge offline">offline</span>
+                </div>
+              </div>
+
+              <div class="node-row node-row-small">
+                <div class="node mini" role="listitem">
+                  <p class="node-label">UX</p>
+                  <h3>Content Ops</h3>
+                </div>
+                <div class="node mini" role="listitem">
+                  <p class="node-label">API</p>
+                  <h3>Dev Relay</h3>
+                </div>
+                <div class="node mini" role="listitem">
+                  <p class="node-label">QA</p>
+                  <h3>Review Unit</h3>
+                </div>
+                <div class="node mini" role="listitem">
+                  <p class="node-label">PM</p>
+                  <h3>Product Desk</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="panel-stack" data-reveal-group>
+          <article class="card panel" data-reveal>
+            <div class="pad">
+              <div class="panel-head">
+                <h2>Aktive Prioritäten</h2>
+                <span class="badge busy">5 offen</span>
+              </div>
+              <ul class="task-list">
+                <li><span>Landing Iteration</span><small>Heute · 18:30</small></li>
+                <li><span>API Health Check</span><small>Heute · 20:00</small></li>
+                <li><span>Copy QA / DE+EN</span><small>Morgen · 09:00</small></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card panel" data-reveal>
+            <div class="pad">
+              <div class="panel-head">
+                <h2>Live Chat Snapshot</h2>
+                <span class="badge online">2 threads</span>
+              </div>
+              <p class="muted">"Deploy-Fenster bestätigt."</p>
+              <p class="muted">"Content-Review in 15 Minuten."</p>
+            </div>
+          </article>
+        </aside>
+      </section>
+
+      <section class="team-areas" data-reveal-group aria-label="Bereichsübersicht">
+        <article class="card area-card" data-reveal>
+          <div class="pad">
+            <p class="eyebrow">Marketing</p>
+            <h3>Campaign Pulse</h3>
+            <p class="muted">Assets bereit · nächste Freigabe 19:00</p>
+          </div>
+        </article>
+
+        <article class="card area-card" data-reveal>
+          <div class="pad">
+            <p class="eyebrow">Development</p>
+            <h3>Build Stream</h3>
+            <p class="muted">2 Features aktiv · 1 Hotfix review</p>
+          </div>
+        </article>
+
+        <article class="card area-card" data-reveal>
+          <div class="pad">
+            <p class="eyebrow">Content</p>
+            <h3>Editorial Lane</h3>
+            <p class="muted">DE/EN Sync · Qualitätscheck läuft</p>
+          </div>
+        </article>
+
+        <article class="card area-card" data-reveal>
+          <div class="pad">
+            <p class="eyebrow">Product</p>
+            <h3>Roadmap Desk</h3>
+            <p class="muted">Q2 Ziele priorisiert · Discovery aktiv</p>
+          </div>
+        </article>
+
+        <article class="card area-card" data-reveal>
+          <div class="pad">
+            <p class="eyebrow">Sales</p>
+            <h3>Pipeline Radar</h3>
+            <p class="muted">3 qualifizierte Leads · Follow-up offen</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; <span id="year"></span> Hendrik Schneemann · Mission Control Demo</span>
+      <span>Dark UI Prototype · HTML/CSS/JS</span>
+    </footer>
+  </div>
+
+  <script src="assets/js/mission-control.js" type="module"></script>
+</body>
+</html>
