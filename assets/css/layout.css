@@ -44,10 +44,12 @@ nav a {
   transition:background-color .2s ease, border-color .2s ease, color .2s ease;
 }
 
-nav a:hover {
-  color:var(--text);
-  border-color:rgba(126, 163, 255, 0.38);
-  background:rgba(95, 141, 255, 0.14);
+@media (hover:hover) and (pointer:fine) {
+  nav a:hover {
+    color:var(--text);
+    border-color:rgba(126, 163, 255, 0.38);
+    background:rgba(95, 141, 255, 0.14);
+  }
 }
 
 nav a.is-active {
