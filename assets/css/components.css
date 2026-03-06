@@ -262,7 +262,8 @@
 
 nav a:focus-visible,
 .btn:focus-visible,
-.brand:focus-visible {
+.brand:focus-visible,
+.menu-toggle:focus-visible {
   outline:2px solid #93b2ff;
   outline-offset:2px;
 }
