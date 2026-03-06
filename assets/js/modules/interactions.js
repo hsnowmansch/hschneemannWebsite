@@ -45,6 +45,123 @@ export function initHeroParallax() {
   update();
 }
 
+export function initMobileNavigation() {
+  const header = document.getElementById("site-header");
+  const nav = document.getElementById("primary-nav");
+  const toggle = header?.querySelector(".menu-toggle");
+  const navLinks = nav ? Array.from(nav.querySelectorAll("a")) : [];
+
+  if (!header || !nav || !toggle || !navLinks.length) {
+    return;
+  }
+
+  const media = window.matchMedia("(max-width: 760px)");
+  let lastFocused = null;
+
+  const focusableSelector =
+    "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+
+  const isOpen = () => nav.classList.contains("is-open");
+
+  const openMenu = () => {
+    lastFocused = document.activeElement;
+    nav.classList.add("is-open");
+    document.body.classList.add("menu-open");
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", "Menü schließen");
+
+    const firstLink = navLinks[0];
+    firstLink?.focus();
+  };
+
+  const closeMenu = ({ restoreFocus = true } = {}) => {
+    nav.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Menü öffnen");
+
+    if (restoreFocus && lastFocused instanceof HTMLElement) {
+      lastFocused.focus();
+    }
+  };
+
+  const onToggleClick = () => {
+    if (isOpen()) {
+      closeMenu();
+      return;
+    }
+
+    openMenu();
+  };
+
+  const onDocumentClick = (event) => {
+    if (!media.matches || !isOpen()) {
+      return;
+    }
+
+    const target = event.target;
+    if (!(target instanceof Node)) {
+      return;
+    }
+
+    if (!header.contains(target)) {
+      closeMenu({ restoreFocus: false });
+    }
+  };
+
+  const onKeydown = (event) => {
+    if (!media.matches || !isOpen()) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeMenu();
+      return;
+    }
+
+    if (event.key !== "Tab") {
+      return;
+    }
+
+    const focusables = Array.from(nav.querySelectorAll(focusableSelector));
+    if (!focusables.length) {
+      return;
+    }
+
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    const active = document.activeElement;
+
+    if (event.shiftKey && active === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && active === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+
+  const onMediaChange = () => {
+    if (!media.matches) {
+      closeMenu({ restoreFocus: false });
+      nav.style.removeProperty("display");
+    }
+  };
+
+  toggle.addEventListener("click", onToggleClick);
+  document.addEventListener("click", onDocumentClick);
+  document.addEventListener("keydown", onKeydown);
+  media.addEventListener("change", onMediaChange);
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (media.matches) {
+        closeMenu({ restoreFocus: false });
+      }
+    });
+  });
+}
+
 export function initScrollNavigation() {
   const navLinks = Array.from(document.querySelectorAll("nav a[href^='#']"));
   if (!navLinks.length) {

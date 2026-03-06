@@ -21,6 +21,10 @@ header {
   transition:padding .24s ease, background-color .24s ease, box-shadow .24s ease;
 }
 
+.menu-toggle {
+  display:none;
+}
+
 header.is-condensed {
   padding:10px 14px;
   background:rgba(9, 15, 30, 0.9);
@@ -42,6 +46,10 @@ nav a {
   font-size:0.92rem;
   border:1px solid transparent;
   transition:background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+nav.is-open {
+  display:flex;
 }
 
 nav a:hover {
@@ -128,6 +136,49 @@ footer {
   .grid,
   .conversion-pad {
     grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:760px) {
+  header {
+    min-height:56px;
+  }
+
+  .menu-toggle {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:8px 12px;
+    border-radius:10px;
+    border:1px solid rgba(134, 162, 221, 0.5);
+    background:rgba(13, 23, 42, 0.95);
+    color:#eff4ff;
+    font-weight:700;
+    font-size:0.9rem;
+  }
+
+  nav {
+    position:absolute;
+    top:calc(100% + 8px);
+    left:0;
+    right:0;
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    padding:10px;
+    border-radius:14px;
+    border:1px solid rgba(78, 98, 132, 0.9);
+    background:rgba(9, 15, 30, 0.98);
+    box-shadow:0 16px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  nav a {
+    width:100%;
+  }
+
+  body.menu-open {
+    overflow:hidden;
   }
 }
 
