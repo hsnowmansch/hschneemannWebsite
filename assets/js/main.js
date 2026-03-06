@@ -4,6 +4,7 @@ import { initRevealAnimations } from "./modules/reveal.js";
 import { updateYear } from "./modules/year.js";
 import { initHeaderCondense, initHeroParallax, initScrollNavigation } from "./modules/interactions.js";
 import { initConversionTracking, initMobileStickyCtaTracking } from "./modules/tracking.js";
+import { initLeadTracking } from "./modules/lead-tracking.js";
 
 updateYear();
 wireOptionalLink("appsLink", LINKS.linktreeOrApps);
@@ -14,3 +15,4 @@ initHeroParallax();
 initScrollNavigation();
 initConversionTracking();
 initMobileStickyCtaTracking();
+initLeadTracking();
