@@ -101,6 +101,13 @@ section { margin-top:42px; }
   gap:20px;
 }
 
+.segment-grid {
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:14px;
+}
+
 .showcase-grid {
   display:grid;
   grid-template-columns:repeat(3, minmax(0, 1fr));
@@ -183,6 +190,7 @@ footer {
   .hero-shell,
   .value-grid,
   .offer-grid,
+  .segment-grid,
   .showcase-grid,
   .grid,
   .proof-grid,

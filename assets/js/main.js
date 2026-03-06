@@ -17,3 +17,29 @@ initScrollNavigation();
 initConversionTracking();
 initMobileStickyCtaTracking();
 initLeadTracking();
+
+const trackSegmentClick = (segmentId) => {
+  const payload = {
+    event: "segment_cta_click",
+    segment_id: segmentId,
+  };
+
+  if (Array.isArray(window.dataLayer)) {
+    window.dataLayer.push(payload);
+  }
+
+  if (typeof window.gtag === "function") {
+    window.gtag("event", "segment_cta_click", {
+      segment_id: segmentId,
+    });
+  }
+};
+
+document.querySelectorAll(".segment-cta[data-segment-id]").forEach((element) => {
+  element.addEventListener("click", () => {
+    const segmentId = element.getAttribute("data-segment-id");
+    if (!segmentId) return;
+
+    trackSegmentClick(segmentId);
+  });
+});
