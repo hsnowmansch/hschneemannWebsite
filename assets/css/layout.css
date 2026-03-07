@@ -116,8 +116,47 @@ footer {
   font-size:13px;
   display:flex;
   justify-content:space-between;
+  align-items:center;
   gap:10px;
   flex-wrap:wrap;
+}
+
+.footer-links {
+  display:flex;
+  gap:12px;
+}
+
+.footer-links a {
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  text-decoration:underline;
+}
+
+.legal-pad {
+  display:grid;
+  gap:18px;
+}
+
+.legal-head {
+  padding:0;
+}
+
+.legal-block h3 {
+  margin:0 0 8px;
+}
+
+.legal-block p {
+  margin:0 0 10px;
+  color:#c7d3eb;
+}
+
+.legal-block a {
+  color:#d9e6ff;
 }
 
 @media (max-width:1000px) {
