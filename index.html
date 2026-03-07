@@ -25,6 +25,7 @@
         <b>Hendrik Schneemann</b>
       </a>
       <nav aria-label="Hauptnavigation">
+        <a href="#segments">Problem-Segmente</a>
         <a href="#offer">Angebot</a>
         <a href="#proof">Ergebnisse</a>
         <a href="#work">Selected Work</a>
@@ -94,6 +95,74 @@
           <li>PHP / Symfony</li>
           <li>Sentry &amp; Analytics</li>
         </ul>
+      </section>
+
+      <section id="segments" class="segments" aria-labelledby="segments-heading" data-reveal-group>
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Developer Positioning</p>
+          <h2 id="segments-heading">Wähle den Problemraum, der euch gerade bremst</h2>
+          <div class="segment-jump-links" aria-label="Direkte Sprunglinks zu Problem-Segmenten">
+            <a href="#segment-release-stau">Release-Stau im iOS-Team</a>
+            <a href="#segment-legacy-mix">Legacy UIKit/SwiftUI-Mischbetrieb</a>
+            <a href="#segment-app-backend-gap">App + Backend Delivery-Lücke</a>
+          </div>
+        </div>
+
+        <div class="segment-grid">
+          <article class="card segment-card" id="segment-release-stau" data-reveal>
+            <div class="pad">
+              <p class="value-label">Segment 01</p>
+              <h3>Release-Stau im iOS-Team</h3>
+              <p class="muted"><strong>Symptom:</strong> Features bleiben zu lange in Review und Releases verschieben sich sprintübergreifend.</p>
+              <p class="muted"><strong>Kosten des Nicht-Handelns:</strong> Verpasste Learnings, steigender Stakeholder-Druck und sinkende Team-Moral.</p>
+              <ul class="clean-list">
+                <li>2–3 Wochen klarer Delivery-Plan statt Ad-hoc-Priorisierung</li>
+                <li>Kürzere Durchlaufzeit von Ticket bis produktivem Release</li>
+                <li>Transparente Weekly-Outcomes für Product und Management</li>
+              </ul>
+              <p class="muted">Proof: <a href="#case-cityapp">CityApp Case</a> zeigt iOS-Lead + Teamkoordination.</p>
+              <div class="cta">
+                <a class="btn primary segment-cta" data-segment-id="release-stau" href="#contact">Release-Stau im Gespräch lösen</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card segment-card" id="segment-legacy-mix" data-reveal>
+            <div class="pad">
+              <p class="value-label">Segment 02</p>
+              <h3>Legacy UIKit/SwiftUI-Mischbetrieb</h3>
+              <p class="muted"><strong>Symptom:</strong> Neue Features dauern, weil UIKit-Altlasten und SwiftUI-Module unklar verzahnt sind.</p>
+              <p class="muted"><strong>Kosten des Nicht-Handelns:</strong> Höhere Bug-Rate, langsameres Onboarding und wachsender Refactor-Backlog.</p>
+              <ul class="clean-list">
+                <li>Pragmatische Migrationspfade ohne Big-Bang-Risiko</li>
+                <li>Klare Modulgrenzen für bessere Wartbarkeit</li>
+                <li>Stabilere Releases trotz gemischtem Stack</li>
+              </ul>
+              <p class="muted">Proof: <a href="#case-cityapp">CityApp Case</a> mit modularer SwiftUI-Struktur und Skalierungsfokus.</p>
+              <div class="cta">
+                <a class="btn primary segment-cta" data-segment-id="legacy-mix" href="#contact">Legacy-Mix strukturiert modernisieren</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card segment-card" id="segment-app-backend-gap" data-reveal>
+            <div class="pad">
+              <p class="value-label">Segment 03</p>
+              <h3>App + Backend Delivery-Lücke</h3>
+              <p class="muted"><strong>Symptom:</strong> iOS und Backend liefern asynchron, Integrationen brechen spät im Prozess.</p>
+              <p class="muted"><strong>Kosten des Nicht-Handelns:</strong> Teure Nacharbeiten kurz vor Release und unklare Verantwortlichkeiten im Team.</p>
+              <ul class="clean-list">
+                <li>Abgestimmte API- und App-Inkremente pro Sprint</li>
+                <li>Frühere Integrationstests für weniger Last-Minute-Fixes</li>
+                <li>Einheitliche Ownership über Frontend und Backend hinweg</li>
+              </ul>
+              <p class="muted">Proof: <a href="#case-muellapp">Müllapp Case</a> mit UIKit-Frontend und PHP-Backend aus einer Hand.</p>
+              <div class="cta">
+                <a class="btn primary segment-cta" data-segment-id="app-backend-gap" href="#contact">Delivery-Lücke gemeinsam schließen</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
     <section id="offer" class="value-grid" aria-labelledby="offer-heading" data-reveal-group>
@@ -178,7 +247,7 @@
           <p class="eyebrow">Selected Work</p>
           <div class="showcase-grid">
             <div>
-              <h3>CityApp · iOS-Lead und Teamkoordination</h3>
+              <h3 id="case-cityapp">CityApp · iOS-Lead und Teamkoordination</h3>
               <p class="muted">Modulare SwiftUI-App mit SPM-Struktur und KMP-Anbindung – aufgesetzt für skalierbare Weiterentwicklung statt kurzfristige Fixes.</p>
             </div>
             <div>
@@ -186,7 +255,7 @@
               <p class="muted">Produktkonzept, UX-Flow und technische Umsetzung als schneller End-to-End Launch mit iterierbarer Architektur.</p>
             </div>
             <div>
-              <h3>Müllapp · App + Backend Delivery</h3>
+              <h3 id="case-muellapp">Müllapp · App + Backend Delivery</h3>
               <p class="muted">UIKit-Frontend und PHP-Backend aus einer Hand mit Fokus auf robuste Datenflüsse und wartbares Setup.</p>
             </div>
           </div>

@@ -215,6 +215,28 @@
 
 .showcase h3 { margin-bottom:8px; }
 
+.segment-jump-links {
+  margin-top:10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.segment-jump-links a {
+  text-decoration:none;
+  font-weight:600;
+  font-size:0.84rem;
+  padding:6px 10px;
+  border-radius:999px;
+  color:#d8e3fb;
+  border:1px solid rgba(83, 106, 146, 0.88);
+  background:rgba(15, 29, 53, 0.86);
+}
+
+.segment-card .muted strong {
+  color:#dce6fc;
+}
+
 nav a:focus-visible,
 .btn:focus-visible,
 .brand:focus-visible {
