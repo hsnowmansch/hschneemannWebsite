@@ -74,6 +74,7 @@
   justify-content:center;
   gap:8px;
   padding:11px 16px;
+  min-height:44px;
   border-radius:12px;
   border:1px solid rgba(80, 104, 143, 0.92);
   text-decoration:none;
@@ -285,6 +286,31 @@ nav a:focus-visible,
   .hero-pad { padding:24px 20px; }
   .cta .btn { flex:1 1 100%; }
   .trust-strip { gap:10px; }
+}
+
+.mobile-sticky-cta {
+  display:none;
+}
+
+@media (max-width:768px) {
+  .mobile-sticky-cta {
+    position:fixed;
+    left:12px;
+    right:12px;
+    bottom:max(12px, env(safe-area-inset-bottom));
+    z-index:90;
+    display:block;
+  }
+
+  .mobile-sticky-cta .btn {
+    width:100%;
+    min-height:48px;
+    box-shadow:0 10px 24px rgba(2, 7, 20, 0.35);
+  }
+
+  .hero-pad .cta .btn {
+    min-height:44px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -3,7 +3,7 @@ import { wireOptionalLink } from "./modules/links.js";
 import { initRevealAnimations } from "./modules/reveal.js";
 import { updateYear } from "./modules/year.js";
 import { initHeaderCondense, initHeroParallax, initScrollNavigation } from "./modules/interactions.js";
-import { initConversionTracking } from "./modules/tracking.js";
+import { initConversionTracking, initMobileStickyCtaTracking } from "./modules/tracking.js";
 
 updateYear();
 wireOptionalLink("appsLink", LINKS.linktreeOrApps);
@@ -13,3 +13,4 @@ initHeaderCondense();
 initHeroParallax();
 initScrollNavigation();
 initConversionTracking();
+initMobileStickyCtaTracking();
