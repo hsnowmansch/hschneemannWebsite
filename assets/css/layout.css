@@ -101,6 +101,13 @@ section { margin-top:34px; }
   gap:14px;
 }
 
+.proof-grid {
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:14px;
+}
+
 .conversion-pad {
   display:grid;
   grid-template-columns:1.2fr auto;
@@ -126,6 +133,7 @@ footer {
   .offer-grid,
   .showcase-grid,
   .grid,
+  .proof-grid,
   .conversion-pad {
     grid-template-columns:1fr;
   }
