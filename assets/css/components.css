@@ -91,6 +91,50 @@
 
 .btn:active { transform:translateY(1px) scale(.99); }
 
+.response-time {
+  margin:14px 0 0;
+  color:#d6e2f8;
+  font-size:0.95rem;
+}
+
+.response-time strong {
+  color:#fff;
+}
+
+.decision-faq {
+  margin-top:16px;
+  display:grid;
+  gap:10px;
+}
+
+.decision-faq-title {
+  margin:0;
+  color:#9cb1d9;
+  font-weight:700;
+  font-size:0.8rem;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+}
+
+.decision-faq details {
+  border:1px solid rgba(78, 100, 138, 0.8);
+  border-radius:12px;
+  background:rgba(15, 27, 48, 0.72);
+  padding:10px 12px;
+}
+
+.decision-faq summary {
+  cursor:pointer;
+  color:#eff4ff;
+  font-weight:700;
+}
+
+.decision-faq details p {
+  margin:10px 0 0;
+  color:#c6d3ef;
+  line-height:1.5;
+}
+
 .signal-row {
   margin:22px 0 0;
   padding:0;
