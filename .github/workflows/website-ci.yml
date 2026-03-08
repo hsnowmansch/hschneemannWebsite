@@ -1,0 +1,34 @@
+name: Website CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build static HTML from template
+        run: |
+          chmod +x scripts/build-html.sh
+          ./scripts/build-html.sh
+
+      - name: Validate generated artifact exists
+        run: |
+          test -s index.html
+          grep -q "<html" index.html
+          grep -q "<head" index.html
+          grep -q "<body" index.html
+
+      - name: Ensure generated file is committed
+        run: |
+          if ! git diff --quiet -- index.html; then
+            echo "index.html is out of date. Run ./scripts/build-html.sh and commit the result."
+            git --no-pager diff -- index.html
+            exit 1
+          fi
