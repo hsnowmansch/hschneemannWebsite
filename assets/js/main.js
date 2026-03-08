@@ -2,7 +2,7 @@ import { LINKS } from "./config.js";
 import { wireOptionalLink } from "./modules/links.js";
 import { initRevealAnimations } from "./modules/reveal.js";
 import { updateYear } from "./modules/year.js";
-import { initHeaderCondense, initHeroParallax, initScrollNavigation } from "./modules/interactions.js";
+import { initHeaderCondense, initHeroParallax, initMobileNavigation, initScrollNavigation } from "./modules/interactions.js";
 import { initConversionTracking, initMobileStickyCtaTracking } from "./modules/tracking.js";
 import { initLeadTracking } from "./modules/lead-tracking.js";
 
@@ -12,6 +12,7 @@ wireOptionalLink("linkedinLink", LINKS.linkedin);
 initRevealAnimations();
 initHeaderCondense();
 initHeroParallax();
+initMobileNavigation();
 initScrollNavigation();
 initConversionTracking();
 initMobileStickyCtaTracking();
