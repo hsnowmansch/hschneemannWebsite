@@ -10,9 +10,10 @@
   content:"";
   width:12px;
   height:12px;
-  border-radius:999px;
-  background:linear-gradient(135deg, var(--accent), #9ab5ff);
-  box-shadow:0 0 0 7px rgba(95, 141, 255, 0.24);
+  border-radius:3px;
+  background:linear-gradient(135deg, var(--accent), #f0b073);
+  box-shadow:0 0 0 7px rgba(216, 132, 66, 0.24);
+  transform:rotate(45deg);
 }
 
 .card {
@@ -29,9 +30,9 @@
   --hero-parallax:0px;
   border-radius:var(--radius-xl);
   background:
-    radial-gradient(580px 280px at 90% -10%, rgba(95, 141, 255, 0.26), transparent 60%),
-    radial-gradient(320px 240px at 0% 100%, rgba(49, 198, 170, 0.16), transparent 62%),
-    linear-gradient(170deg, #111d34, #0f1a2f);
+    radial-gradient(580px 280px at 90% -10%, rgba(216, 132, 66, 0.26), transparent 60%),
+    radial-gradient(320px 240px at 0% 100%, rgba(73, 193, 157, 0.16), transparent 62%),
+    linear-gradient(170deg, #1a2537, #151f30);
   transform:translate3d(0, calc(var(--hero-parallax) * -1), 0);
   will-change:transform;
 }
@@ -56,7 +57,7 @@
 }
 
 .hl {
-  background:linear-gradient(180deg, transparent 45%, rgba(95, 141, 255, 0.4) 45%);
+  background:linear-gradient(180deg, transparent 45%, rgba(216, 132, 66, 0.44) 45%);
   border-radius:0.2em;
   padding:0 0.2em;
 }
@@ -86,8 +87,8 @@
 
 .btn.primary {
   border-color:transparent;
-  background:linear-gradient(135deg, #5f8dff, #7ea3ff);
-  color:#071225;
+  background:linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color:#20150b;
 }
 
 .btn:active { transform:translateY(1px) scale(.99); }
@@ -286,7 +287,7 @@ nav a:focus-visible,
 .btn:focus-visible,
 .brand:focus-visible,
 .menu-toggle:focus-visible {
-  outline:2px solid #93b2ff;
+  outline:2px solid var(--accent-strong);
   outline-offset:2px;
 }
 

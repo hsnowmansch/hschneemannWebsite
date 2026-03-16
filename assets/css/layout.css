@@ -58,15 +58,15 @@ nav.is-open {
 @media (hover:hover) and (pointer:fine) {
   nav a:hover {
     color:var(--text);
-    border-color:rgba(126, 163, 255, 0.38);
-    background:rgba(95, 141, 255, 0.14);
+    border-color:rgba(236, 155, 90, 0.4);
+    background:rgba(216, 132, 66, 0.16);
   }
 }
 
 nav a.is-active {
   color:#fff;
-  border-color:rgba(126, 163, 255, 0.6);
-  background:rgba(95, 141, 255, 0.2);
+  border-color:rgba(236, 155, 90, 0.65);
+  background:rgba(216, 132, 66, 0.26);
 }
 
 section { margin-top:42px; }
@@ -211,7 +211,7 @@ footer {
     gap:8px;
     padding:8px 12px;
     border-radius:10px;
-    border:1px solid rgba(134, 162, 221, 0.5);
+    border:1px solid rgba(236, 155, 90, 0.45);
     background:rgba(13, 23, 42, 0.95);
     color:#eff4ff;
     font-weight:700;

@@ -1,18 +1,18 @@
 /* Fonts are loaded in index.html via preconnect + stylesheet to avoid render-blocking CSS @import. */
 
 :root {
-  --bg:#070d1a;
-  --bg-soft:#0d162b;
-  --surface:#121d34;
-  --surface-soft:#182640;
-  --surface-strong:#0f1a30;
-  --text:#edf3ff;
-  --muted:#acb8d1;
-  --line:#2d3a55;
-  --accent:#5f8dff;
-  --accent-strong:#7ea3ff;
-  --accent-soft:rgba(95, 141, 255, 0.16);
-  --success:#31c6aa;
+  --bg:#0f141c;
+  --bg-soft:#18212e;
+  --surface:#1b2432;
+  --surface-soft:#233144;
+  --surface-strong:#141d2a;
+  --text:#f3f1ec;
+  --muted:#bcc5d2;
+  --line:#39485f;
+  --accent:#d88442;
+  --accent-strong:#ec9b5a;
+  --accent-soft:rgba(216, 132, 66, 0.18);
+  --success:#49c19d;
   --radius-xl:30px;
   --radius-lg:22px;
   --radius-md:16px;
@@ -20,8 +20,8 @@
   --shadow:0 30px 60px rgba(2, 6, 18, 0.42);
   --shadow-soft:0 16px 36px rgba(2, 6, 18, 0.24);
   --max:1140px;
-  --sans:"Inter", "Segoe UI", sans-serif;
-  --display:"Plus Jakarta Sans", "Inter", sans-serif;
+  --sans:"Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  --display:"Fraunces", "Times New Roman", serif;
   --reveal-delay:0ms;
 }
 
@@ -35,9 +35,9 @@ body {
   color:var(--text);
   line-height:1.65;
   background:
-    radial-gradient(800px 420px at 15% -8%, rgba(95, 141, 255, 0.28), transparent 58%),
-    radial-gradient(760px 460px at 95% 8%, rgba(49, 198, 170, 0.14), transparent 62%),
-    linear-gradient(180deg, var(--bg) 0%, #081126 46%, var(--bg-soft) 100%);
+    radial-gradient(800px 420px at 15% -8%, rgba(216, 132, 66, 0.24), transparent 58%),
+    radial-gradient(760px 460px at 95% 8%, rgba(73, 193, 157, 0.12), transparent 62%),
+    linear-gradient(180deg, var(--bg) 0%, #131b27 46%, var(--bg-soft) 100%);
 }
 
 a { color:inherit; }
@@ -50,7 +50,7 @@ a { color:inherit; }
   padding:10px 14px;
   border-radius:10px;
   color:#fff;
-  background:#1f3f82;
+  background:#7d4b22;
   border:1px solid transparent;
   text-decoration:none;
 }
@@ -62,7 +62,7 @@ h2,
 h3 {
   margin:0;
   font-family:var(--display);
-  letter-spacing:-0.026em;
+  letter-spacing:-0.018em;
   line-height:1.12;
 }
 
