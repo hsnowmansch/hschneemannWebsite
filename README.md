@@ -1,4 +1,4 @@
-# Hendrik Schneemann - Portfolio Website
+# Hendrik Schneemann - Portfolio Website v1.0
 
 Modern portfolio website built with Astro 4.x.
 
